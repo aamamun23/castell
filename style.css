@@ -9,6 +9,10 @@
     margin: 0 auto;
     padding: 0;
 }
+img{
+    width: 100%;
+    max-width: 100%;
+}
 h2{
     position: relative;
 }
@@ -42,6 +46,7 @@ h2::after{
 }
 .logo img{
     height: 72px;
+    width: auto;
 }
 .navigation ul{
     display: flex;
@@ -129,6 +134,9 @@ h2::after{
 }
 .competent-partner .left, .competent-partner .right{
     width: 50%;
+}
+.competent-partner .left img{
+    width: auto;
 }
 .competent-partner .right h2{
     font-family: 'Palatino';
@@ -426,6 +434,9 @@ footer .footer-item:first-child img{
     display: inline-block;
     padding: 10px;
 }
+.footer-item img{
+    width: auto;
+}
 footer .footer-item h4{
     font-family: 'Raleway';
     font-weight: 700;
@@ -469,4 +480,138 @@ footer .copyright-text p{
     font-size: 12px;
     line-height: 14px;
     /* identical to box height */
+}
+
+.header-mobile{
+    display: none;
+}
+
+/* Responsive Using Media Query  */
+
+@media screen and (max-width: 414px){
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .navigation ul{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .navigation ul li:last-child a{
+        background: transparent;
+    }
+    .hero{
+        display: none;
+    }
+    .header-mobile{
+        display: block;
+    }
+    .header-mobile .header-image img{
+        width: 100%;
+    }
+    .hero-text{
+        margin: 25px auto;
+        width: 90%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .hero-text h1{
+        font-size: 28px;
+    }
+    .hero-text a{
+        font-size: 12px;
+    }
+
+    .competent-partner{
+        padding: 40px 0;
+    }
+    .competent-partner .left, .competent-partner .right{
+        width: 90%;
+    }
+    .competent-partner .right h2{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 28px;
+    }
+
+    .our-services{
+        padding: 40px 0 0;
+    }
+    .our-services h2{
+        font-size: 28px;
+    }
+    h2::after{
+        display: none;
+    }
+    .our-services .service{
+        margin-top: -40px;
+    }
+
+    .why{
+        padding: 40px 0;
+    }
+    .why h2{
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .why .container{
+        flex-direction: row;
+        column-gap: 0;
+        flex-wrap: wrap;
+    }
+    .why-item{
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .get-touch{
+        padding: 40px 0;
+    }
+    .get-text{
+        width: 90%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .get-text h4{
+        font-size: 28px;
+    }
+    .get-text p{
+        font-size: 16px;
+    }
+    .arrow{
+        text-align: center;
+    }
+
+    .contact-us{
+        padding: 40px 0;
+    }
+    .contact-us .contact-text{
+        width: 90%;
+        text-align: center;
+    }
+    .contact-text h2{
+        font-size: 28px;
+    }
+    .contact-text p{
+        font-size: 16px;
+    }
+    .contact-form .form-group{
+        width: 90%;
+    }
+
+
+    footer{
+        padding: 40px 0;
+    }
+    footer .footer-item{
+        width: 30%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    footer .copyright-text{
+        text-align: center;
+        margin-top: 30px;
+    }
+
 }
